@@ -1,6 +1,3 @@
-# harryTuttleKit
-Simple Meteor 1.8 starter kit
-
 ```
   ___ ___                              ___________      __    __  .__            ____  __.__  __   
  /   |   \_____ ______________ ___.__. \__    ___/_ ___/  |__/  |_|  |   ____   |    |/ _|__|/  |_ 
@@ -10,4 +7,7 @@ Simple Meteor 1.8 starter kit
        \/      \/              \/                                           \/          \/         
 
 ```
+# harryTuttleKit
+Simple Meteor 1.8 starter kit
+
 ![Image of Harry Tuttle](https://media.giphy.com/media/55bqPxog68ayLqEvc7/giphy.gif)
