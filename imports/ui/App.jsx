@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div>Hi Meteor!</div>
-    );
-  }
-}
-
-export default App;
+export default ({ children }) => {
+  return (
+    <div className="app-container">
+        {children}
+    </div>
+  );
+};
