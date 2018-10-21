@@ -7,7 +7,6 @@
        \/      \/              \/                                           \/          \/         
 
 ```
-# harryTuttleKit
 Simple Meteor 1.8 starter kit
 
 ![Image of Harry Tuttle](https://media.giphy.com/media/55bqPxog68ayLqEvc7/giphy.gif)
