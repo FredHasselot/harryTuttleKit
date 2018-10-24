@@ -13,7 +13,7 @@ Meteor.startup(() => {
       </StaticRouter>
     );
   };
-
+  //
   onPageLoad((sink) => {
     sink.renderIntoElementById('app', renderToString(<App location={sink.request.url} />));
   });

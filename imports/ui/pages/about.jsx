@@ -2,7 +2,10 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div>This App run on Meteor 1.8 and use React, and React-router 4.</div>
+    <div className="common-container">
+      This App run on Meteor 1.8 and use React, React-router 4, and React-bootstrap
+      (for the time being).
+    </div>
   );
 };
 
