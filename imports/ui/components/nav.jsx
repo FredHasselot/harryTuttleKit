@@ -1,38 +1,69 @@
 import React, { Component } from 'react';
-import { Nav, NavItem } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
+
+import Helmet from './helmet';
+
 class Navigation extends Component {
-  state = {
-    activeKey: 1
-  }
+// =============================================================================
+//                                  LIFE CYCLE
+// =============================================================================
+// SOON...
+componentDidMount() {
+  const pathname = this.props.history.location.pathname;
+  this.activeDefault(pathname);
+}
 // =============================================================================
 //                                  FUNCTIONS
 // =============================================================================
+  activeDefault(pathname) {
+    let itemRef = 'home';
+    if (pathname === '/about') { itemRef = 'about'; }
+    this.refs[itemRef].classList.add('active');
+  }
+
   goTo(key) {
-    const navId = document.querySelector('#navId');
-    if (navId) {
-      this.setState({ activeKey: key }, () => {
-        if (key === 1) { this.props.history.push('/'); }
-        if (key === 2) { this.props.history.push('/about'); }
-      });
-    }
+    if (key === window.location.pathname) { return false; }
+    const nav = document.querySelector('nav');
+    if (nav) { this.props.history.push(key); }
+  }
+
+  navTo(item, destination) {
+    this.removeAllActiveClasses();
+    this.refs[item].classList.add('active');
+    this.goTo(destination);
+  }
+// -----------------------------------------------------------------------------
+  removeAllActiveClasses() {
+    const allActive = document.querySelectorAll('.custom-nav-item');
+    allActive.forEach((a) => { a.classList.remove('active'); });
   }
 // =============================================================================
 //                                  RENDER
 // =============================================================================
   render() {
-    const { activeKey } = this.state;
-
     return (
-      <Nav bsStyle="pills" activeKey={activeKey} onSelect={this.goTo.bind(this)} id="navId">
-         <NavItem eventKey={1}>
-           Home
-         </NavItem>
-         <NavItem eventKey={2}>
-           About
-         </NavItem>
-       </Nav>
+      <header>
+        {/************************* HELMET ***********************************/}
+        <Helmet title={this.props.history.location.pathname} />
+        {/*************************** NAV ************************************/}
+        <nav>
+          <div
+            className="custom-nav-item btn btn-default"
+            ref="home"
+            onClick={this.navTo.bind(this, 'home', '/')}
+          >
+            Home
+          </div>
+          <div
+            className="custom-nav-item btn btn-default"
+            ref="about"
+            onClick={this.navTo.bind(this, 'about', '/about')}
+          >
+            About
+          </div>
+        </nav>
+      </header>
     );
   }
 }

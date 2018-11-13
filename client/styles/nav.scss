@@ -1,9 +1,5 @@
-.nav-link, a {
-  color: unset;
-  text-decoration: none;
-  &:hover, &:focus {
-    color: unset;
-    text-decoration: none;
-    outline: none;
-  }
+@import 'variables';
+
+header {
+  
 }
