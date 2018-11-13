@@ -12,11 +12,16 @@ class Navigation extends Component {
 componentDidMount() {
   const pathname = this.props.history.location.pathname;
   this.activeDefault(pathname);
+
+  this.props.history.listen((e) => {
+    this.activeDefault(e.pathname);
+  });
 }
 // =============================================================================
 //                                  FUNCTIONS
 // =============================================================================
   activeDefault(pathname) {
+    this.removeAllActiveClasses();
     let itemRef = 'home';
     if (pathname === '/about') { itemRef = 'about'; }
     this.refs[itemRef].classList.add('active');
