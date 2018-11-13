@@ -7,6 +7,16 @@
        \/      \/              \/                                           \/          \/         
 
 ```
-Simple Meteor 1.8 starter kit
+# Simple Meteor 1.8 starter kit 
 
 ![Image of Harry Tuttle](https://media.giphy.com/media/55bqPxog68ayLqEvc7/giphy.gif)
+
+This app is coded with React and based on Meteor. 
+
+## Main packages are: 
+
+* react-router v4
+* react-helmet
+* react-bootstrap
+
+[For the time being]
