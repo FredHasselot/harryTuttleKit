@@ -5,6 +5,7 @@ class HelmetComp extends Component {
   getTitle(pathname) {
     if (pathname === '/') { return 'Home'; }
     if (pathname === '/about') { return 'About'; }
+    return '';
   }
 
   render() {
