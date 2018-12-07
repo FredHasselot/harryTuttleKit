@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, withRouter } from 'react-router';
+import { Route, Switch, withRouter, Redirect } from 'react-router';
 // PAGES
 import Home from './pages/home';
 import About from './pages/about';
@@ -12,6 +12,7 @@ export const Router = withRouter(({ location }) => {
       <Switch location={location}>
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route path="/about" render={(props) => <About {...props} />} />
+        <Redirect to="/" />
       </Switch>
     </App>
   );
