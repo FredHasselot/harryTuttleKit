@@ -25,9 +25,17 @@ The app is rendering on both side. SSR & CSR.
 
 ### Tests Runner: 
 
-Now the Harry Tuttle Kit use Cypress as tests runner.
+Now the Harry Tuttle Kit use [Cypress](https://github.com/cypress-io/cypress) as tests runner.
 
-Type "Meteor yarn test" to run default tests.
-(if you don't have yarn installed, type: "meteor npm install -g yarn")
+Type:
+```
+Meteor yarn test
+```
+to run default tests.
+
+If you don't have yarn installed, type::
+```
+meteor npm install -g yarn
+```
 
 Gut!
