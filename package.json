@@ -3,12 +3,13 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test": "cypress open",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "bcrypt": "^3.0.4",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.5.0",
     "react-bootstrap": "^0.32.4",
@@ -26,6 +27,7 @@
     "testModule": "tests/main.js"
   },
   "devDependencies": {
+    "cypress": "^3.1.5",
     "eslint-config-rallycoding": "^3.2.0",
     "eslint-import-resolver-meteor": "^0.4.0"
   }

@@ -1,7 +1,8 @@
 {
   "extends":rallycoding,
   "globals": {
-        "_": false
+        "_": false,
+        "cy": true
     },
   "rules": {
       "arrow-body-style": 0,
