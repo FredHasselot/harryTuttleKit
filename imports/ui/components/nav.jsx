@@ -52,7 +52,7 @@ componentDidMount() {
         {/************************* HELMET ***********************************/}
         <Helmet title={this.props.history.location.pathname} />
         {/*************************** NAV ************************************/}
-        <nav>
+        <nav className="text-center">
           <div
             className="custom-nav-item btn btn-default"
             ref="home"
