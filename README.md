@@ -8,7 +8,7 @@
 
 ```
 # Harry Tuttle Kit
-## A simple (but usefull) Meteor 1.8 starter kit 
+## A simple (but usefull) Meteor 1.8 starter kit (Meteor V1.8.0.2 for now) 
 
 ![Image of Harry Tuttle](https://media.giphy.com/media/55bqPxog68ayLqEvc7/giphy.gif)
 
@@ -22,3 +22,12 @@ The app is rendering on both side. SSR & CSR.
 * react-bootstrap
 
 [For the time being]
+
+### Tests Runner: 
+
+Now the Harry Tuttle Kit use Cypress as tests runner.
+
+Type "Meteor yarn test" to run default tests.
+(if you don't have yarn installed, type: "meteor npm install -g yarn")
+
+Gut!
