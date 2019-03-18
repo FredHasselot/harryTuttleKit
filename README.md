@@ -29,7 +29,7 @@ Now the Harry Tuttle Kit use [Cypress](https://github.com/cypress-io/cypress) as
 
 To run default tests type:
 ```
-Meteor yarn test
+meteor yarn test
 ```
 
 
