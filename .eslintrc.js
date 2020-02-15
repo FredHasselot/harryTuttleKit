@@ -38,7 +38,6 @@ module.exports = {
   rules: {
     "capitalized-comments": ["off"],
     "no-warning-comments": ["off"],
-    "camelcase": [2, {"properties": "never"}],
-    "complexity": ["error", 50] // TEMP. Desactive complexity warning on response_controller
+    "camelcase": [2, {"properties": "never"}]
   }
 };
