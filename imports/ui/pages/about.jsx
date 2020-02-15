@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   return (
-    <div className="common-container">
+    <div className="common-container text-center">
       <h1>About page</h1>
-      <p>This App run on Meteor 1.8 and use React, React-router 4,
-      React-bootstrap & React-helmet
-      (for the time being).</p>
+      <p>
+        This App run on Meteor 1.9 on both side (SSR/CSR) & use React (the
+        functionnal way).
+      </p>
     </div>
   );
 };

@@ -1,11 +1,18 @@
-import React from 'react';
-import Navigation from './components/nav';
+import React from "react";
+import Navigation from "./components/nav";
+import { PropTypes } from "prop-types";
 
-export default ({ children }) => {
+const Default = props => {
   return (
     <div className="app-container">
       <Navigation />
-      {children}
+      {props.children}
     </div>
   );
 };
+
+Default.propTypes = {
+  children: PropTypes.node
+};
+
+export default Default;

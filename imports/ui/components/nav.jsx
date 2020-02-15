@@ -1,78 +1,43 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import { withRouter, Link } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
+import Helmet from "./helmet";
 
-import Helmet from './helmet';
+const Navigation = props => {
+  const path = props.history.location.pathname;
+  const paths = {
+    about: "/about",
+    root: "/"
+  };
 
-class Navigation extends Component {
-// =============================================================================
-//                                  LIFE CYCLE
-// =============================================================================
-// SOON...
-componentDidMount() {
-  const pathname = this.props.history.location.pathname;
-  this.activeDefault(pathname);
+  const isActive = p => {
+    if (path === p) {
+      return "active";
+    }
 
-  this.props.history.listen((e) => {
-    this.activeDefault(e.pathname);
-  });
-}
-// =============================================================================
-//                                  FUNCTIONS
-// =============================================================================
-  activeDefault(pathname) {
-    this.removeAllActiveClasses();
-    let itemRef = 'home';
-    if (pathname === '/about') { itemRef = 'about'; }
-    this.refs[itemRef].classList.add('active');
-  }
+    return;
+  };
 
-  goTo(key) {
-    if (key === window.location.pathname) { return false; }
-    const nav = document.querySelector('nav');
-    if (nav) { this.props.history.push(key); }
-  }
+  return (
+    <header>
+      {/************************* HELMET ***********************************/}
+      <Helmet title={props.history.location.pathname} />
+      {/*************************** NAV ************************************/}
+      <nav className="nav nav-pills nav-justified">
+        <Link className={`nav-link ${isActive(paths.root)}`} to={paths.root}>
+          Home
+        </Link>
+        <Link className={`nav-link ${isActive(paths.about)}`} to={paths.about}>
+          About
+        </Link>
+      </nav>
+    </header>
+  );
+};
 
-  navTo(item, destination) {
-    this.removeAllActiveClasses();
-    this.refs[item].classList.add('active');
-    this.goTo(destination);
-  }
-// -----------------------------------------------------------------------------
-  removeAllActiveClasses() {
-    const allActive = document.querySelectorAll('.custom-nav-item');
-    allActive.forEach((a) => { a.classList.remove('active'); });
-  }
-// =============================================================================
-//                                  RENDER
-// =============================================================================
-  render() {
-    return (
-      <header>
-        {/************************* HELMET ***********************************/}
-        <Helmet title={this.props.history.location.pathname} />
-        {/*************************** NAV ************************************/}
-        <nav className="text-center">
-          <div
-            className="custom-nav-item btn btn-default"
-            ref="home"
-            onClick={this.navTo.bind(this, 'home', '/')}
-          >
-            Home
-          </div>
-          <div
-            className="custom-nav-item btn btn-default"
-            ref="about"
-            onClick={this.navTo.bind(this, 'about', '/about')}
-          >
-            About
-          </div>
-        </nav>
-      </header>
-    );
-  }
-}
-// =============================================================================
-//                                  EXPORT
-// =============================================================================
+Navigation.propTypes = {
+  history: PropTypes.object
+};
+
 export default withRouter(Navigation);

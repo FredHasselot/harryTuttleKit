@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { Component } from "react";
+import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
 
 class HelmetComp extends Component {
   getTitle(pathname) {
-    if (pathname === '/') { return 'Home'; }
-    if (pathname === '/about') { return 'About'; }
-    return '';
+    if (pathname === "/") {
+      return "Home";
+    }
+
+    if (pathname === "/about") {
+      return "About";
+    }
+
+    return "Home";
   }
 
   render() {
@@ -23,5 +30,9 @@ class HelmetComp extends Component {
     );
   }
 }
+
+HelmetComp.propTypes = {
+  title: PropTypes.string
+};
 
 export default HelmetComp;
