@@ -12,7 +12,7 @@
     "bootstrap": "^4.4.1",
     "browserslist": "^4.8.7",
     "caniuse-lite": "^1.0.30001027",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "meteor-node-stubs": "^0.4.1",
     "popper.js": "^1.16.1",
     "react": "^16.12.0",
