@@ -7,6 +7,7 @@ module.exports = {
   parser: "babel-eslint",
   extends: [
     // "eslint:recommended",
+    // "xo-space",
     "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
@@ -33,11 +34,21 @@ module.exports = {
       {"name": "Link", "linkAttribute": "to"}
     ]
   },
-  globals: {},
+  globals: {
+    "Cypress": true,
+    "cy": true,
+    "it": true,
+    "beforeEach": true,
+    "describe": true,
+    "context": true,
+    "expect": true,
+    "gon": true
+  },
   // rules list : http://eslint.org/docs/rules/
   rules: {
     "capitalized-comments": ["off"],
     "no-warning-comments": ["off"],
-    "camelcase": [2, {"properties": "never"}]
+    "camelcase": [2, {"properties": "never"}],
+    "complexity": ["error", 50]
   }
 };

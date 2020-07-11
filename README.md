@@ -8,7 +8,7 @@
 
 ```
 # Harry Tuttle Kit
-## A simple (but usefull) Meteor 1.9 starter kit (Meteor V1.9.0.0 for now) 
+## A simple (but usefull) Meteor 1.10 starter kit (Meteor V1.10.0.0 for now) 
 
 ![Image of Harry Tuttle](https://media.giphy.com/media/55bqPxog68ayLqEvc7/giphy.gif)
 
